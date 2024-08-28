@@ -1,0 +1,23 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.main{
+    background-color: black;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+.textOrange{
+    @extend .gradientText;
+    width: fit-content;
+    background: $color-orange-gradient;
+}
+.gradientText{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

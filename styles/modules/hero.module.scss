@@ -1,0 +1,90 @@
+@import "../app.scss";
+@import "../variables.scss";
+
+.heroMain{
+    border: 1px solid red;
+    padding-left: 10%;
+    padding-top: 2%;
+    height: inherit;
+
+    .textMain{
+        @extend .flexRow;
+        justify-content: space-between;
+        .heroLeft{
+            h1{
+                font-size: $font-size-header;
+            }
+        }
+
+
+        .heroRight{
+            padding-right: 20%;
+            .bgCircle{
+                background-color: $color-orange;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                position: relative;
+                @extend .flexCol;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    z-index: 10;
+                }
+            }
+            .glassyDiv{
+                position: absolute;
+                top: 1%;
+                left: 50%;
+                backdrop-filter: blur(20px);
+                background-color: rgba(245, 245, 245, 0.067);
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+            }
+        }   
+    }
+    //end of textMain
+
+    .serviceContainer{
+        width: fit-content;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        align-content: start;
+        gap: .5rem .2rem;
+        p{
+            text-align: center;
+            padding:.4rem;
+            border: 1px solid rgb(159, 159, 159);
+            border-radius: 1rem;
+            width: fit-content;
+        }
+    }
+    //end of service
+
+    .heroImage{
+        border: 1px solid red;
+        height: 40%;
+        margin-top: 5%;
+        @extend .flexRow !optional;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10%;
+        .imageContainer{
+            height: 100%;
+            width: 70%;
+            overflow: hidden;
+            background-color: gray;
+            border-radius: 1rem;
+        }
+        .stats{
+            height: 100%;
+            width: 20%;
+            background: $color-orange-gradient;
+            border-radius: 1rem;
+        }
+    }
+    
+}
