@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className={styles.serviceContainer}>
           {Services.map((service,i)=>{
             return(
-              <div className={styles.gradientContainer}>
+              <div className={styles.gradientContainer} key={i}>
                <p key={i}>{service}</p>
               </div>
             )
