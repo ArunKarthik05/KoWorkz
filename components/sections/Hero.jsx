@@ -2,6 +2,8 @@
 import React from 'react'
 import styles from "../../styles/modules/hero.module.scss";
 import useIsMobile from '@/CustomHooks/IsMobile';
+import ExploreUs from '../svg/ExploreUs';
+import HeroSecArrow from '../svg/HeroSecArrow';
 
 export default function HeroSection() {
   const isMobile = useIsMobile();
@@ -18,8 +20,14 @@ export default function HeroSection() {
         {!isMobile &&(
           <div className={styles.heroRight}>
             <div className={styles.bgCircle}>
-              <p>Explore Us</p>
-              <div className={styles.glassyDiv}></div>
+              <div className={styles.glassyDiv}>
+                <div className={styles.svgContainer}>
+                  <ExploreUs/>
+                </div>
+                <div className={styles.arrow}>
+                  <HeroSecArrow/>
+                </div>
+              </div>
             </div>
           </div>
           )
@@ -27,13 +35,19 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.serviceContainer}>
-        {Services.map((service,i)=>{
-          return(
-            <p key={i}>{service}</p>
-          )
-        })
-        }
+          {Services.map((service,i)=>{
+            return(
+              <div className={styles.gradientContainer}>
+               <p key={i}>{service}</p>
+              </div>
+            )
+          })
+          }
       </div>
+
+      {isMobile && (
+        <div className={styles.gradientLine}></div>
+      )}
 
       <div className={styles.heroImage}>
         <div className={styles.imageContainer}></div>

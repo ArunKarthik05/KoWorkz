@@ -21,3 +21,29 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.header{
+    font-size: $font-size-header;
+    @include respond-to(mobiles){
+        font-size: $font-size-header-mobile;
+    }
+}
+.content{
+    padding: 10vh 8rem 0 8rem;
+    @include respond-to(mobiles){
+        padding: 10vh 3rem 0 3rem;
+    }
+}
+.lineContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    .line{
+        background: $color-orange-gradient;
+        height: 2px;
+        width:50px;
+    }
+    .lineTag{
+        font-size: $font-size-medium;
+    }
+}

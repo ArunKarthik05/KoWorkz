@@ -4,5 +4,8 @@
     position: relative;
     section{
         height: 90vh;
+        @include respond-to(mobiles){
+            height: fit-content;
+        }
     }
 }
