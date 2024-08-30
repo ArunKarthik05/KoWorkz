@@ -30,7 +30,7 @@
 .content{
     padding: 10vh 8rem 0 8rem;
     @include respond-to(mobiles){
-        padding: 10vh 3rem 0 3rem;
+        padding: 10vh 1rem 0 1rem;
     }
 }
 .lineContent{
