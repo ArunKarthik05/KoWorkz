@@ -1,7 +1,11 @@
+'use client'
 import React from 'react'
 import styles from "../../styles/modules/hero.module.scss";
+import useIsMobile from '@/CustomHooks/IsMobile';
 
 export default function HeroSection() {
+  const isMobile = useIsMobile();
+
   const Services = ["Private Offices","Office Suites","Assorted Cabins","Conference Rooms","Dedicated Seats","Day Pass"]
   return (
     <div className={styles.heroMain}>
@@ -11,12 +15,15 @@ export default function HeroSection() {
           <h1 className={styles.textOrange}>Coworking Spaces</h1>
         </div>
 
-        <div className={styles.heroRight}>
-          <div className={styles.bgCircle}>
-            <p>Explore Us</p>
-            <div className={styles.glassyDiv}></div>
+        {!isMobile &&(
+          <div className={styles.heroRight}>
+            <div className={styles.bgCircle}>
+              <p>Explore Us</p>
+              <div className={styles.glassyDiv}></div>
+            </div>
           </div>
-        </div>
+          )
+        }
       </div>
 
       <div className={styles.serviceContainer}>
