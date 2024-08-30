@@ -3,12 +3,13 @@
 
 .heroMain{
     // border: 1px solid red;
-    padding-left: 10%;
-    padding-top: 5%;
+    padding-left: 10vw;
+    padding-top: 5vh;
     height: inherit;
     @include respond-to(mobiles){
         margin:0 1rem;
-        padding: 0;
+        padding: 0  ;
+        padding-bottom: 3rem;
         // margin-top: 10vh;
     }
 
