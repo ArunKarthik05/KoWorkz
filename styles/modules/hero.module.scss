@@ -2,17 +2,27 @@
 @import "../variables.scss";
 
 .heroMain{
-    border: 1px solid red;
+    // border: 1px solid red;
     padding-left: 10%;
     padding-top: 2%;
     height: inherit;
 
     .textMain{
-        @extend .flexRow;
+        @extend .flexRow !optional;
         justify-content: space-between;
+        @include respond-to(mobiles){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
         .heroLeft{
             h1{
                 font-size: $font-size-header;
+                @include respond-to(mobiles){
+                    font-size: 42px;
+                }
             }
         }
 
@@ -49,15 +59,15 @@
 
     .serviceContainer{
         width: fit-content;
-        border: 1px solid red;
+        // border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(3,auto);
         align-content: start;
         gap: .5rem .2rem;
         p{
             text-align: center;
-            padding:.4rem;
-            border: 1px solid rgb(159, 159, 159);
+            padding:.4rem .6rem;
+            border: 1px solid rgb(159, 159, 159,.5);
             border-radius: 1rem;
             width: fit-content;
         }
@@ -65,7 +75,7 @@
     //end of service
 
     .heroImage{
-        border: 1px solid red;
+        // border: 1px solid red;
         height: 40%;
         margin-top: 5%;
         @extend .flexRow !optional;
