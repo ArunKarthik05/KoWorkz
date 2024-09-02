@@ -1,0 +1,40 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.btnMain {
+    position: relative; 
+    width: fit-content;
+
+    button {
+        background: $color-orange-gradient;
+        border-radius: 2rem;
+        padding: .7rem 2rem;
+        border: none;
+        color: white;
+        z-index: 1; /* Keep the button above the arrow */
+    }
+
+    .arrowContainer {
+        transform: translateY(-100%) translateX(50%);
+        width: fit-content;
+        z-index: 2;
+        background-color: white;
+        padding: 0 1.5rem;
+        border-radius: 1.5rem;
+        transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+        opacity: 0;
+        svg {
+            margin: 0;
+        }
+    }
+
+    .hovered {
+        .arrowContainer {
+            background-color: red;
+            transform: translateX(150%); /* Move into view */
+            opacity: 1; /* Fade in */
+            z-index: 0; /* Ensure it's visible above other content */
+        }
+    }
+}

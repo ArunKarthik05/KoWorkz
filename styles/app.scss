@@ -23,6 +23,8 @@
 }
 .header{
     font-size: $font-size-header;
+    padding-top: 2rem;
+    font-weight: bold;
     @include respond-to(mobiles){
         font-size: $font-size-header-mobile;
     }

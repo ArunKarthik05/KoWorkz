@@ -2,8 +2,14 @@
 
 .main{
     position: relative;
-    section{
+    .hero{
         height: 90vh;
+        @include respond-to(mobiles){
+            height: fit-content;
+        }
+    }
+    section{
+        min-height: 90vh;
         @include respond-to(mobiles){
             height: fit-content;
         }
