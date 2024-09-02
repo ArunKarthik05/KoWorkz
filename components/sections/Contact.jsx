@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "../../styles/modules/contact.module.scss";
 import OrangeButton from '../OrangeButton';
+import SocialMedia from '../SocialMedia';
 
 export default function Contact() {
   return (
@@ -47,7 +48,21 @@ export default function Contact() {
                 </div>
 
                 {/* Right */}
-                <div className={styles.flexRight}></div>    
+                <div className={styles.flexRight}>
+                    <div>
+                        <h2>Address</h2>
+                        <p>4517 Washington Ave. Manchester,Kentucky 39495</p>
+                    </div>
+                    <div>
+                        <h2>Contact</h2>
+                        <p>Phone : +919999999999</p>
+                        <p>Email : example@gmail.com </p>
+                    </div>
+                    <div>
+                        <h2>Stay Connected</h2> 
+                        <SocialMedia/>
+                    </div>
+                </div>    
             </div> 
         </div>
     </div>
