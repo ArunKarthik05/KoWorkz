@@ -10,18 +10,39 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3,1fr);
-        place-items: center;
+        place-items:start;
         justify-items: center;
-        padding: 5vh 20vh 0 20vh;
-        gap:2rem;
+        padding: 10vh 15vh 5vh 15vh;
+        gap: 4rem;
+        @include respond-to(medium){
+            padding: 5vh 0;
+        }
+        @include respond-to(mobiles){
+            grid-template-columns: repeat(2,1fr);
+            padding: 5vh 0 0 0;
+            place-items: start;
+            gap: 2rem;
+        }
         .itemContainer{
             @extend .flexCol !optional;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             text-align: center;
             gap: 2rem;
+            @include respond-to(mobiles){
+                gap:1rem;
+            }
             h2{
                 font-size: 20px;
+                align-self: center;
+                height: 2rem;
+                @include respond-to(medium){
+                    height: 3rem;
+                }
+                @include respond-to(mobiles){
+                    font-size: $font-size-small;
+                    height: 4rem;
+                }
             }
             p{
                 font-size: $font-size-small;

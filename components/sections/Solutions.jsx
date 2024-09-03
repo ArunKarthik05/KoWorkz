@@ -4,6 +4,15 @@ import Image from 'next/image';
 import StarIcon from "../../public/Assets/Solutions/Chair.svg";
 import Calender from "../../public/Assets/Solutions/Calender.svg";
 import Sanitizer from "../../public/Assets/Solutions/Sanitizer.svg";
+import Car from "../../public/Assets/Solutions/Car.svg";
+import Visitor from "../../public/Assets/Solutions/Visitor.svg";
+import Meeting from "../../public/Assets/Solutions/Meeting.svg";
+import Wifi from "../../public/Assets/Solutions/Wifi.svg";
+import Record from "../../public/Assets/Solutions/Record.svg";
+import Printer from "../../public/Assets/Solutions/Printer.svg";
+import Networks from "../../public/Assets/Solutions/Networks.svg";
+import Cafeteria from "../../public/Assets/Solutions/Cafeteria.svg";
+import Location from "../../public/Assets/Solutions/Location.svg";
 
 export default function Solutions() {
     const Solutions = [
@@ -21,8 +30,52 @@ export default function Solutions() {
             "image": <Sanitizer/>,
             "heading": "Sanitized Workspaces",
             "about": "Clean, safe, and well maintained sanitized workspaces for your needs."
-        }        
-        
+        },        
+        {
+            "image": <Car/>,
+            "heading": "Two / Four Wheeler Parking",
+            "about": "Convenient parking for two/four wheelers."
+        },
+        {
+            "image": <Visitor/>,
+            "heading": "Visitor Management",
+            "about": "Efficient and secure visitor management."
+        },
+        {
+            "image": <Meeting/>,
+            "heading": "Meeting Room Credits",
+            "about": "Earn credits for meeting room bookings."
+        },
+        {
+            "image": <Wifi/>,
+            "heading": "Fast, Secure, Unlimited Wi-Fi",
+            "about": "Fast, secure, and unlimited Wi-Fi access."
+        },
+        {
+            "image": <Record/>,
+            "heading": "Attendance Record On Demand",
+            "about": "On-demand access to attendance records."
+        },
+        {
+            "image": <Printer/>,
+            "heading": "Printer and Scanner",
+            "about": "Convenient access to printer and scanner."
+        },
+        {
+            "image": <Networks/>,
+            "heading": "Network Connected",
+            "about": "Seamlessly connected to secure networks."
+        },
+        {
+            "image": <Cafeteria/>,
+            "heading": "Cafeteria - Tea, Coffee & Snacks",
+            "about": "Enjoy tea, coffee, and snacks daily."
+        },
+        {
+            "image": <Location/>,
+            "heading": "Virtual Business Address",
+            "about": "Professional virtual business address services."
+        }                        
     ]
   return (
     <div className={styles.main}>
