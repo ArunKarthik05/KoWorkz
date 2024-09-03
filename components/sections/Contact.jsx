@@ -11,10 +11,7 @@ export default function Contact() {
             <div className={styles.line}></div>
             <p className={styles.lineTag}>Contact Us</p>
             </div>
-            <div className={styles.header}>
-                Join Us in Our <span>Creative</span>
-                <br/>CoWorking Space
-            </div> 
+            <h1 className={styles.header}>Join Us in Our <span>Creative</span><br/>CoWorking Space</h1>
 
             <div className={styles.contactFlex}>
                 <div className={styles.flexLeft}>

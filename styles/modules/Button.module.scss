@@ -6,35 +6,54 @@
     position: relative; 
     width: fit-content;
     height: fit-content;
+    @extend .flexRow !optional;
+
     button {
         background: $color-orange-gradient;
         border-radius: 2rem;
         padding: .7rem 2rem;
         border: none;
         color: white;
-        z-index: 1; /* Keep the button above the arrow */
+        z-index: 2; 
+        @include respond-to(mobiles){
+          padding: .4rem 2rem;
+          border-radius: 1.5rem;
+        }
     }
 
     .arrowContainer {
-        transform: translateY(-100%) translateX(50%);
-        width: fit-content;
-        z-index: 2;
         background-color: white;
-        padding: 0 1.5rem;
-        border-radius: 1.5rem;
-        transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
-        opacity: 0;
-        svg {
-            margin: 0;
+        padding-left:2rem;
+        border-radius: 2rem;
+        @extend .flexCol !optional;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+        visibility: hidden;
+        z-index: -1;
+        @include respond-to(mobiles){
+          visibility: visible;
+          z-index: 1;
+          transform: translateX(-50%);
+          border-radius: 1.5rem;
+          padding-left: 2.5rem;
         }
     }
-
-    .hovered {
-        .arrowContainer {
-            background-color: red;
-            transform: translateX(150%); /* Move into view */
-            opacity: 1; /* Fade in */
-            z-index: 0; /* Ensure it's visible above other content */
+       .add{
+        animation: reveal 1s ease forwards;
+        visibility: visible;
+       }
+       @keyframes reveal {
+        0% {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(-45%);
+          opacity: 1;
+          z-index: 1;
+          visibility: visible;
         }
     }
 }
+

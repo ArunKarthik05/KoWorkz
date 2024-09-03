@@ -35,7 +35,8 @@
             h2{
                 font-size: 20px;
                 align-self: center;
-                height: 2rem;
+                height: 3rem;
+                width: 70%;
                 @include respond-to(medium){
                     height: 3rem;
                 }
