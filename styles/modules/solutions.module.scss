@@ -1,0 +1,55 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main{
+    background-color: white;
+    color: black;
+    height: fit-content;
+    .gridContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        place-items: center;
+        justify-items: center;
+        padding: 5vh 20vh 0 20vh;
+        gap:2rem;
+        .itemContainer{
+            @extend .flexCol !optional;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 2rem;
+            h2{
+                font-size: 20px;
+            }
+            p{
+                font-size: $font-size-small;
+                color:#959595;
+            }
+            .svgContainer{
+                background:$color-orange-gradient;
+                width: fit-content;
+                height: fit-content;
+                padding: 1rem;
+                border-radius: 50%;
+                position: relative;
+            }
+            .star{
+                position: absolute;
+                bottom: -15%;
+                left: 10%;
+                background-color: black;
+                padding: 0 .2rem;
+                border-radius: 13px;
+                height: 28px;
+                width: 28px;
+                padding:0 16px;
+                @extend .imgContainer !optional;
+                img{
+                    object-fit: contai;
+                }
+            }
+        }
+    }
+}

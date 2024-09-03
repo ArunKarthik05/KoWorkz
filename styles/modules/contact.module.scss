@@ -15,8 +15,7 @@
         padding-top: 5vh;
         @extend .flexRow !optional;
         gap: 2rem;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: stretch;
         @include respond-to(medium){
             display: flex;
             flex-direction: column;  
@@ -56,6 +55,7 @@
                         border: none;
                     }
                     &::placeholder{
+                        font-family: "Inter";
                         color:white;
                     }
                 }
@@ -82,6 +82,7 @@
             h2{
                 font-size: 30px;
                 color: black;
+                padding-top: 1rem;
             }
             p{
                 font-size: $font-size-small;

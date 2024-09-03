@@ -51,7 +51,7 @@ export default function Services() {
           <div className={styles.line}></div>
           <p className={styles.lineTag}>Our Services</p>
         </div>
-        <h1 className={styles.header}>Discover our <br /> CoWorking Solutions</h1>
+        <h1 className={styles.header}>Explore our <br /> CoWorking Services</h1>
 
         {Services.map((service, i) => (
           <div className={styles.mainDiv} key={i}>
