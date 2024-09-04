@@ -9,8 +9,8 @@ export default function Slider() {
     <div className={styles.slider}>
         {slides.map((slide,i)=>{
             return(
-              <div className={styles.flexRow}>
-                <p key={i}>{slide}</p>
+              <div className={styles.flexRow} key={i}>
+                <p >{slide}</p>
                 <Image src="/slider.png" alt='star' height="20" width="20"/>
               </div>
             )
