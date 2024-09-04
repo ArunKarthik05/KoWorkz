@@ -1,0 +1,11 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main{
+    height: 100%;
+    .heading{
+        @extend .flexRow !optional;
+        justify-content: space-between;
+    }
+}

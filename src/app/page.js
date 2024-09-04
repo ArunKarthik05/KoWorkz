@@ -1,6 +1,8 @@
 import styles from "../../styles/modules/page.module.scss";
 import Navbar from "@/components/Navbar";
+import Slider from "@/components/Slider";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 import HeroSection from "@/components/sections/Hero";
 import Locations from "@/components/sections/Locations";
 import Services from "@/components/sections/Services";
@@ -28,6 +30,10 @@ export default function Home() {
 
       <section>
         <Contact/>
+      </section>
+      <Slider/>
+      <section>
+        <Footer/>
       </section>
 
     </main>

@@ -1,11 +1,11 @@
 @import "../app.scss";
 
-.navbar{
+.navbar {
     font-size: $font-size-small;
-    @include respond-to(medium){
+    @include respond-to(medium) {
         font-size: $font-size-xs;
     }
-    @include respond-to(xs){
+    @include respond-to(xs) {
         gap: 5%;
         font-size: 10px;
     }
@@ -14,27 +14,28 @@
     flex-direction: row;
     align-items: center;
     gap: 10%;
-    position: relative;
-    @include respond-to(mobiles){
+    z-index: 99;
+    @include respond-to(mobiles) {
         padding-right: 10vw;
         justify-content: space-between;
         gap: 0 !important;
     }
 
-    .logo{
+    .logo {
         margin-left: 10%;
         height: 80px;
         width: 150px;
-        @include respond-to(medium){
+        @include respond-to(medium) {
             height: 50px;
             width: 100px;
         }
-        @include respond-to(mobiles){
+        @include respond-to(mobiles) {
             height: 100px;
             width: 120px;
         }
     }
-    .dropDown{
+
+    .dropDown {
         position: absolute;
         top: 15vh;
         right: 10vw;
@@ -45,7 +46,8 @@
         padding: 2rem 3rem 1rem 1rem;
         border-radius: 1rem;
         border-bottom: 1px solid gray;
-        .dropDownItem{
+
+        .dropDownItem {
             display: block;
             padding-bottom: 1rem;
         }
@@ -53,27 +55,26 @@
         z-index: 99;
     }
 
-    .itemsWrapper{
-        position:sticky;
-        top: 10%;
-        z-index: 99;
+    .itemsWrapper {
+        cursor: pointer;
+        position:fixed;
+        top: 3%;
+        left: 30%; // Sticks to the very top of the viewport
+        z-index: 98; // Below the navbar
         background: linear-gradient(90deg, rgba(249,178,24,0.8) 0%, rgba(0,0,0,80%) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255,255,255,0.2) 65%, rgba(0,0,0,0.8) 80%, rgba(241,91,89,0.8) 100%);
-        position: relative;
         padding: 1px;
         border-radius: 1rem;
         backdrop-filter: blur(20px);
-
-        .items{
+        .items {
             @extend .flexRow !optional;
             align-items: center;
             justify-content: space-between;
             background-color: black;
-
             height: fit-content;
             padding: .5rem 2rem;
-            gap:3rem;
+            gap: 3rem;
             border-radius: 1rem;
-            @include respond-to(medium){
+            @include respond-to(medium) {
                 gap: 2rem;
                 padding: .5rem 1rem;
             }
