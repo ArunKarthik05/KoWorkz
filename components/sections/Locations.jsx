@@ -19,7 +19,7 @@ export default function  () {
     },
     {
       image :"/Mapa.jpeg",
-      name:"Mapa Centre",
+      name:"MAPA Centre",
       link:"https://maps.app.goo.gl/gmgNcLkSyFbe5yPY6"
     },
     {
