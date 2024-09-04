@@ -32,9 +32,6 @@
         visibility: hidden;
         z-index: -1;
         @include respond-to(mobiles){
-          visibility: visible;
-          z-index: 1;
-          transform: translateX(-50%);
           border-radius: 1.5rem;
           padding-left: 2.5rem;
         }
