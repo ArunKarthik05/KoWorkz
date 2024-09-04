@@ -9,12 +9,19 @@ import Services from "@/components/sections/Services";
 import Solutions from "@/components/sections/Solutions";
 
 export default function Home() {
+  const navItems = [
+    { name: 'Home', link: '' },
+    { name: 'Services', link: '' },
+    { name: 'Locations', link: '' },
+    { name: 'About Us', link: '' },
+    { name: 'Contact Us', link: '' },
+  ];
   return (
     <main className={styles.main}>
-      <Navbar/>
-      <sectio className={styles.hero}>
+      <Navbar navItems={navItems}/>
+      <section className={styles.hero}>
         <HeroSection/>
-      </sectio>
+      </section>
 
       <section>
         <Services/>
@@ -33,7 +40,7 @@ export default function Home() {
       </section>
       <Slider/>
       <section>
-        <Footer/>
+        <Footer navItems={navItems}/>
       </section>
 
     </main>

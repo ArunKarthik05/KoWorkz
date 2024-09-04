@@ -7,5 +7,75 @@
     .heading{
         @extend .flexRow !optional;
         justify-content: space-between;
+        align-items: center;
+        font-size: 32px;
+    }
+    .info{
+        margin-top: 10vh;
+        padding: 10vh 0;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        @extend .flexRow !optional;
+        gap:5rem;
+        .infoDiv1{
+            width: 40%;
+            .name{
+                @extend .flexRow !optional;
+                width: fit-content;
+            }
+        }
+        .about{
+            margin-top: 10%;
+            width: fit-content;
+            line-height: 2;
+        }
+        .contact{
+            cursor: pointer;
+            p{
+                padding: 1rem 0;
+            }
+        }
+        .inputContainer{
+            @extend .flexRow !optional;
+            input{
+                background-color:$color-gray;
+                outline: none;
+                border: none;
+                padding:1rem 2rem;
+                border-top-left-radius:1rem ;
+                border-bottom-left-radius:1rem ;
+                &::placeholder{
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .orangeDiv{
+                background: $color-orange-gradient;
+                padding:0 1rem;
+                border-top-right-radius:1rem ;
+                border-bottom-right-radius:1rem ;
+                @extend .flexRow !optional;
+                align-items: center;
+            }
+        }
+    }
+    .nav{
+        font-size: 22px;
+        padding-bottom: 2rem;
+        @extend .textOrange !optional;
+    }
+    .navContainer{
+        cursor: pointer;
+        .item{
+            text-align: left;
+            padding: 1rem 0;
+        }
+    }
+    .copyRight{
+        font-family: "Semi-Bold";
+        @extend .flexRow !optional;
+        gap:20%;
+        padding: 2rem 0;
+        color:gray;
     }
 }

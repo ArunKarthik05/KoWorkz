@@ -1,24 +1,16 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/modules/navbar.module.scss';
 import Image from 'next/image';
 import useIsMobile from '@/CustomHooks/IsMobile';
 
-export default function Navbar() {
+export default function Navbar({navItems}) {
   const isMobile = useIsMobile();
   const [isOpen,setIsOpen] = useState(false);
 
   const handleClick = ()=>{
     setIsOpen((cur)=>!cur);
   }
-
-  const navItems = [
-    { name: 'Home', link: '' },
-    { name: 'Services', link: '' },
-    { name: 'Locations', link: '' },
-    { name: 'About Us', link: '' },
-    { name: 'Contact Us', link: '' },
-  ];
 
   return (
     <div className={styles.navbar}>

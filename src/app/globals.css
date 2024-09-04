@@ -38,7 +38,7 @@ html,body{
 h1,h2{
   font-family: "Semi-Bold";
 }
-p,h1,h2{
+p,h1,h2,h3{
   padding: 0;
   margin: 0;
 }
