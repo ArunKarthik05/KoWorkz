@@ -4,8 +4,11 @@
 
 .slider{
     @extend .flexRow !optional;
-    gap:1rem;
+    justify-content: space-around;
     background: $color-orange-gradient;
-    border: 1px solid red;
-    height: 10vh;
+    padding: 1rem;
+    overflow: hidden;
+    .flexRow{
+        gap: 3rem;
+    }
 }
