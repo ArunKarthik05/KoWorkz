@@ -5,7 +5,7 @@ import OrangeButton from '../OrangeButton';
 import Arrow from "../../public/Assets/Locations-arrow.svg";
 import Image from 'next/image';
 
-export default function  () {
+export default function Locations() {
   const locations = [
     {
       image :"/Elysium.jpg",
