@@ -22,6 +22,7 @@ export default function Home() {
       <section className={styles.hero}>
         <HeroSection/>
       </section>
+      <Slider/>
 
       <section>
         <Services/>

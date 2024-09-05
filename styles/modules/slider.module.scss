@@ -2,13 +2,35 @@
 @import "../variables.scss";
 @import "../mixins.scss";
 
-.slider{
-    @extend .flexRow !optional;
-    justify-content: space-around;
-    background: $color-orange-gradient;
-    padding: 1rem;
-    overflow: hidden;
-    .flexRow{
-        gap: 3rem;
-    }
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 98%;
+  background: $color-orange-gradient;
+  padding: 1rem;
+  @include respond-to(mobiles){
+    width: 90%;
+  }
+
+  .slidesTrack {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .flexRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
