@@ -86,6 +86,7 @@
         align-content: start;
         gap: 1rem .2rem;
         @include respond-to(mobiles){
+            padding-left:5vw;
             display: grid;
             align-content: center;
             grid-template-columns: repeat(5,15vw); 
