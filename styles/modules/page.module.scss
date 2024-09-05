@@ -3,7 +3,7 @@
 .main{
     position: relative;
     .hero{
-        height: 90vh;
+        min-height: 90vh;
         @include respond-to(mobiles){
             height: fit-content;
         }

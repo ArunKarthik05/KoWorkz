@@ -8,7 +8,7 @@ import HeroSecArrow from '../svg/HeroSecArrow';
 export default function HeroSection() {
   const isMobile = useIsMobile();
 
-  const Services = ["Private Offices","Office Suites","Assorted Cabins","Conference Rooms","Dedicated Seats","Day Pass"]
+  const Services = ["Private Offices","Office Suites","Assorted Cabins","Conference Rooms","Day Pass","Dedicated Seats"]
   return (
     <div className={styles.heroMain}>
       <div className={styles.textMain}>
