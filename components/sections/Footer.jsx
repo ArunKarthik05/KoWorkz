@@ -55,7 +55,7 @@ export default function Footer({navItems}) {
               </div>
             </div>
             <div className={styles.copyRight}>
-              <p>CopRights 2024 @<span className={styles.textOrange}>Koworkz</span></p>
+              <p>CopyRights 2024 @<span className={styles.textOrange}>Koworkz</span></p>
               <p>All Rights Reserved</p>
               <p>User Terms & Conditions | Privacy Policy</p>
             </div>
