@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from '../styles/modules/navbar.module.scss';
 import Image from 'next/image';
 import useIsMobile from '@/CustomHooks/IsMobile';
+import Link from 'next/link';
 
 export default function Navbar({navItems}) {
   const isMobile = useIsMobile();
@@ -10,6 +11,9 @@ export default function Navbar({navItems}) {
 
   const handleClick = ()=>{
     setIsOpen((cur)=>!cur);
+  }
+  const handleNav = ()=>{
+    
   }
 
   return (
@@ -90,7 +94,9 @@ export default function Navbar({navItems}) {
         <div className={styles.itemsWrapper}>
           <div className={styles.items}>
             {navItems.map((item, i) => (
-              <p key={i}>{item.name}</p>
+            <Link href={item.link} key={i} className={styles.link}>
+            {item.name}
+            </Link>
             ))}
           </div>
         </div>

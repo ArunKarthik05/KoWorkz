@@ -7,15 +7,10 @@ import HeroSection from "@/components/sections/Hero";
 import Locations from "@/components/sections/Locations";
 import Services from "@/components/sections/Services";
 import Solutions from "@/components/sections/Solutions";
+import { navItems } from "@/data/navItems";
 
 export default function Home() {
-  const navItems = [
-    { name: 'Home', link: '' },
-    { name: 'Services', link: '' },
-    { name: 'Locations', link: '' },
-    { name: 'About Us', link: '' },
-    { name: 'Contact Us', link: '' },
-  ];
+
   return (
     <main className={styles.main}>
       <Navbar navItems={navItems}/>

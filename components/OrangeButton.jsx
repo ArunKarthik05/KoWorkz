@@ -1,18 +1,29 @@
 'use client'
 import React, { useState } from 'react'
 import styles from '../styles/modules/Button.module.scss';
+import { useRouter } from 'next/navigation'
 
-export default function OrangeButton({text}) {
+export default function OrangeButton({text,redirectLink}) {
     const [isHovered,setIsHovered] = useState(false);
+    const router = useRouter();
     
     const handleHover = ()=>{
-        setIsHovered((cur)=>!cur);
-        console.log(isHovered);
+      setIsHovered((cur)=>!cur);
     }
+    const handleClick = () => {
+      console.log("in")
+      if (redirectLink) {
+        let link = 'services/'
+        link += redirectLink.toLowerCase().replace(/\s+/g, '-'); 
+          console.log(link)
+          router.push(link); 
+      }
+  };
   return (
     <div className={styles.btnMain} onMouseEnter={handleHover} onMouseLeave={handleHover}>
         <button>{text}</button>
         <div  className={`${styles.arrowContainer} ${isHovered ? styles.add : styles.remove}`}
+        onClick={handleClick}
         >
         <svg width="34px" height="34px" viewBox="0 0 41 40" fill="none">
             <ellipse cx="20.5" cy="20" rx="20.5" ry="20" fill="black"/>

@@ -4,8 +4,12 @@ import styles from "../../styles/modules/services.module.scss";
 import OrangeButton from '../OrangeButton';
 
 export default function Services() {
-  // Set up state for toggling all items
-  const [isOpen, setIsOpen] = useState(0); // Using `null` to mean no item is open
+  const [isOpen, setIsOpen] = useState(0); 
+
+  const handleLearnMore = (serviceName) => {
+    const routeName = serviceName.toLowerCase().replace(/\s+/g, '-'); 
+    router.push(`/services/${routeName}`);
+  };
 
   const Services = [
     {
@@ -14,7 +18,7 @@ export default function Services() {
       content: "Our private offices provide the ideal mix of privacy and collaboration. Perfect for teams of any size, these fully-equipped spaces offer a secure and quiet environment, complete with flexible lease options. You'll have 24/7 access, high-speed internet, and premium amenities designed to enhance your productivity."
     },
     {
-      name: "Services",
+      name: "Office Suites",
       tags: ["Customizable Suites", "Growing Teams", "Flexible Terms"],
       content: "Elevate your business with spacious, customizable office suites designed for growing teams. Enjoy the privacy of your own office along with shared amenities like conference rooms and break areas, all within a professional environment with flexible terms."
     },
@@ -73,7 +77,7 @@ export default function Services() {
                 <>
                   <p>{service.content}</p>
                   <div className={styles.btnContainer}>
-                    <OrangeButton text="Learn More"/>
+                    <OrangeButton text="Learn More" redirectLink={service.name}/>
                   </div>
                   <div className={styles.imgContainer}>
                     {/* <Image/> */}

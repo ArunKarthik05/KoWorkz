@@ -1,0 +1,127 @@
+@import "../../styles/app.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.main{
+    background-color: white;
+    min-height: 100vh;
+    padding:2rem 5vw 10vh 5vw;
+    color:gray;
+    @include respond-to(mobiles){
+        padding: 10vh 1rem 0 1rem;
+    }
+
+    .slider{
+        .imgContainer{
+            height: 50vh;
+            width: 90vw;
+            background-color: $color-gray;
+            border-radius: 1rem;
+            @extend .imgContainer !optional;
+            background-color: gray;
+        }
+    }
+    .heading{
+        color: black;
+        padding: 5vh 0 2vh 0;
+    }
+    .featuresContainer{
+        @extend .flexRow !optional;
+        justify-content: space-between;
+        @include respond-to(mobiles){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+        }
+        
+        .feature{
+            width: 15vw;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: $color-light-gray;
+            @include respond-to(mobiles){
+                width: 50vw;
+                display: grid;
+                place-items: center;
+            }
+            
+            .circle{
+                height: 5vh;
+                width: 2.5vw;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $color-orange;
+                @extend .flexCol !optional;
+                align-items: center;
+                justify-content: center;
+                color: black;
+                @include respond-to(mobiles){
+                    height:6vh;
+                    width: 9vw;
+                }
+            }
+            .details{
+                padding: 1rem 1.5rem 0 1.5rem;
+                color: rgb(77, 76, 76);
+                @include respond-to(mobiles){
+                text-align: center;
+                }
+            }
+        }
+    }
+
+    .feedBackContainer{
+    
+        position: relative;
+        @extend .flexRow !optional;
+        justify-content: center;
+        @include respond-to(mobiles){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+        }
+        background-color: $color-light-gray;
+        padding:2rem;
+        border-radius: 1rem;
+        width: 50vw;
+        margin: auto;
+    }
+    .feedback {
+        background-color: black;
+        height: 100%;
+        width: 90%;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        border-radius: 1rem;
+        font-size: $font-size-header-mobile;
+        p{
+            // @extend .textOrange !optional;
+            padding: 2rem 5vw;
+            color: $color-light-gray;
+            position: relative;
+        
+
+            .quote{
+                color: white;
+                font-size: $font-size-header;
+                position: absolute;
+                left: 5%;
+                top: 5%;
+                @extend .textOrange !optional;
+            }
+        }
+
+    }
+      
+    .fadeOut {
+    opacity: 0;
+    }
+    
+    .fadeIn {
+    opacity: 1;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main{
+    header{
+        @extend .flexCol !optional;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: $font-size-header;
+        }
+    }
+    section{
+        min-height: 90vh;
+    }
+}
