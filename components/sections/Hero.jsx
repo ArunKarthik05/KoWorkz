@@ -4,6 +4,7 @@ import styles from "../../styles/modules/hero.module.scss";
 import useIsMobile from '@/CustomHooks/IsMobile';
 import ExploreUs from '../svg/ExploreUs';
 import HeroSecArrow from '../svg/HeroSecArrow';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const isMobile = useIsMobile();
@@ -50,7 +51,9 @@ export default function HeroSection() {
       )}
 
       <div className={styles.heroImage}>
-        <div className={styles.imageContainer}></div>
+        <div className={styles.imageContainer}>
+          <Image src="/hero-section.webp" alt="koworkz-home" height="336" width="970"/>
+        </div>
         <div className={styles.stats}></div>
       </div>
     </div>

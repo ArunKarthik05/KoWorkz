@@ -157,7 +157,7 @@
 
     .heroImage{
         // border: 1px solid red;
-        height: 40vh;
+        height: 45vh;
         padding-bottom: 1rem;
         margin-top: 3vh;
         @extend .flexRow !optional;
@@ -175,13 +175,20 @@
             padding: 0;
         }
         .imageContainer{
+            position: relative;
             height: 100%;
             width: 70%;
             overflow: hidden;
             background-color: gray;
             border-radius: 1rem;
+            img{
+                position: absolute;
+                top: -25%;
+                width: 970px;
+                height: 570px;
+            }
             @include respond-to(mobiles){
-                width: 90%;
+                width: 100%;
             }
         }
         .stats{
