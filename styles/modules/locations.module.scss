@@ -11,10 +11,10 @@
     .content{
         .itemContainer{
             padding-top: 10vh;
-            padding-left: 10vh;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             row-gap: 2rem;
+            place-items: center;
             @include respond-to(medium){
                 padding: 10vh 0 0 0;
                 display: flex;
