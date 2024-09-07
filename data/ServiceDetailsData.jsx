@@ -62,5 +62,22 @@ export const ServiceDetailsData = {
       "The dedicated seats offer the perfect balance of privacy and community. It’s great to have a reliable space in a dynamic environment.",
       "I appreciate the stability of having a dedicated seat. It’s convenient and helps me stay organized and focused throughout the day."
     ]
-  }  
+  },
+  "day-pass": {
+    "images": [],
+    "heading": "Day Pass",
+    "about": "Our day pass provides flexible access to our coworking spaces for those who need a workspace on a short-term basis. Perfect for freelancers, remote workers, or visiting professionals, the day pass grants you full use of our facilities and amenities for a single day. Enjoy a productive work environment with access to high-speed internet, comfortable workstations, and common areas. The day pass offers a convenient and cost-effective solution for those who need a professional workspace without a long-term commitment.",
+    "features": [
+      "Access to all coworking areas and amenities for one day",
+      "High-speed internet and essential office equipment",
+      "Flexible usage without long-term commitment",
+      "Comfortable and professional workspace setup"
+    ],
+    "feedback": [
+      "The day pass was perfect for my short-term project. I had everything I needed for a productive workday.",
+      "I love the flexibility of the day pass. It’s a great option when I need a change of scenery or a temporary workspace.",
+      "Using the day pass gave me access to excellent facilities without the need for a long-term commitment. Highly recommend it for anyone needing temporary office space."
+    ]
+  }
+  
 }
