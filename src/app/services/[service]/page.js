@@ -13,7 +13,7 @@ const Services = ({params}) => {
     return (
         <div className={styles.main}>
             <Navbar navItems={navItems}/>
-            <header>
+            <header className={styles.heading}>
                 <h1>Services</h1>
                 <p>Home/ <span className={styles.textOrange}>Services</span></p>
             </header>
@@ -25,9 +25,9 @@ const Services = ({params}) => {
             </main>
             
             <Slider/>
-            <section>
+            <footer>
                 <Footer navItems={navItems}/>
-            </section>
+            </footer>
         </div>
     );
 };

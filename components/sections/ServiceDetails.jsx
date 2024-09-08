@@ -10,14 +10,14 @@ export default function ServiceDetails({serviceName}) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsFading(true); // Trigger fade-out
+      setIsFading(true); 
       setTimeout(() => {
         setCurrentFeedbackIndex((prevIndex) =>
           prevIndex === data.feedback.length - 1 ? 0 : prevIndex + 1
         );
-        setIsFading(false); // Trigger fade-in
-      }, 500); // Wait for fade-out to complete before switching feedback
-    }, 5000); // Change feedback every 5 seconds
+        setIsFading(false); 
+      }, 500); 
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [data.feedback.length]);
@@ -32,12 +32,12 @@ export default function ServiceDetails({serviceName}) {
 
         {/* content */}
         <div className={styles.contentContainer}>
-        <h2 className={styles.heading}>{data.heading}</h2>
+        <h2 className={styles.subHeading}>{data.heading}</h2>
         <p>{data.about}</p>
         </div>
 
         <div className={styles.contentContainer}>
-          <h2 className={styles.heading}>Our Coworkspace Features</h2>
+          <h2 className={styles.subHeading}>Our Coworkspace Features</h2>
           <div className={styles.featuresContainer}>
             {data.features.map((feature,i)=>{
               return(
@@ -51,7 +51,7 @@ export default function ServiceDetails({serviceName}) {
         </div>
         
       <div className={styles.contentContainer}>
-        <h2 className={styles.heading}>Hear it from our Clients</h2>
+        <h2 className={styles.subHeading}>Hear it from our Clients</h2>
         <div className={styles.feedBackContainer}>
           <div
             className={`${styles.feedback} ${isFading ? styles.fadeOut : styles.fadeIn}`}

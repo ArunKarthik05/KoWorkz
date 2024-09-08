@@ -1,0 +1,151 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main{
+    background-color: white;
+    color: black;
+    height: 100%;   
+    padding-bottom: 10vh;
+    .headingContent{
+        @extend .flexRow !optional;
+        justify-content: center;
+    } 
+    .testimonialContainer{
+        position: relative;
+        box-sizing: border-box;
+        height: 60vh;
+        margin-top: 10vh;
+        padding:0 10vw;
+        width: 100%;
+        @include respond-to(mobiles){
+            height: fit-content;
+            padding: 0;
+            // height: 80vh;
+        }
+        .circle{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            padding:2px;
+            div{
+                transform: rotate(223deg);
+                position: absolute;
+                top: -15%;
+            }
+        }
+        .circle:nth-child(1){
+            left: 8vw;
+            top: 45%;
+            @include respond-to(mobiles){
+                left: -5vw;
+            }
+        }
+        .circle:nth-child(3){
+            right: 8vw;
+            top: 45%;
+            @include respond-to(mobiles){
+                right: -5vw;
+            }
+        }
+        .testimonials{
+            background-color: $color-light-gray;
+            height: 100%;
+            border-radius: 3rem;
+            @extend .flexRow !optional;
+            align-items: center;
+            gap: 5vw;
+            @include respond-to(mobiles){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10vh;
+                font-size: $font-size-xs;
+                padding: 5vh 0;
+            }
+            .imgContainer{
+                margin-left: 10vw;
+                height: 30vh;
+                width: 15vw;
+                background-color: white;
+                border-radius: 50%;
+                position: relative;
+                z-index: 9;
+                overflow: visible;
+                @include respond-to(mobiles){
+                    width: 200px;
+                    height: 200px;
+                    margin-left: 0;
+                }
+                .quoteOpening{
+                    position: absolute;
+                    top: 0;
+                    right:5%;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    background: $color-orange-gradient;
+                    z-index: 10;
+                    @extend .flexCol !optional;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: $font-size-header;
+                }
+            }
+            .textContent{
+                transform: all 0.5s ease;
+                // border: 1px solid red;
+                padding: 0 2vw;
+                @include respond-to(mobiles){
+                    text-align: center;
+                    width: 80%;
+                    left: 0;
+                }
+                p {
+                    padding: 1rem 0;
+                };
+                .text{
+                    color: gray;
+                }
+                .star{
+                    @extend .textOrange !optional;
+                    padding:0 1rem;
+                    font-size: 32px;
+                }
+            }
+            .feedback{
+                // border: 1px solid red;
+            }
+        }
+    }
+}
+.fadeOut {
+    animation: fadeout .5s ease-in forwards;
+}
+    
+.fadeIn {
+animation: fadein .5s ease-in forwards;
+}
+@keyframes fadein{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fadeout{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}

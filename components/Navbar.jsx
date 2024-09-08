@@ -20,7 +20,7 @@ export default function Navbar({navItems}) {
   }
 
   return (
-    <div className={styles.navbar}>
+    <nav className={styles.navbar}>
       <Image
         src="/logo.svg"
         alt="koworkz-logo"
@@ -89,7 +89,9 @@ export default function Navbar({navItems}) {
         {isOpen && (
             <div className={styles.dropDown}  onClick={()=>(setIsOpen(false))}>
                 {navItems.map((item,i)=>(
-                    <p key={i} className={styles.dropDownItem}>{item.name}</p>
+                     <Link href={item.link} key={i} className={styles.dropDownItem}>
+                     {item.name}
+                     </Link>
                 ))}
             </div>
         )
@@ -106,6 +108,6 @@ export default function Navbar({navItems}) {
           </div>
         </div>
       )}
-    </div>
+    </nav>
   );
 }

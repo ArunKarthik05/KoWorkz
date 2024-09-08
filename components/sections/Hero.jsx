@@ -2,9 +2,8 @@
 import React from 'react'
 import styles from "../../styles/modules/hero.module.scss";
 import useIsMobile from '@/CustomHooks/IsMobile';
-import ExploreUs from '../svg/ExploreUs';
-import HeroSecArrow from '../svg/HeroSecArrow';
 import Image from 'next/image';
+import HeroRight from '../HeroRight';
 
 export default function HeroSection() {
   const isMobile = useIsMobile();
@@ -19,18 +18,7 @@ export default function HeroSection() {
         </div>
 
         {!isMobile &&(
-          <div className={styles.heroRight}>
-            <div className={styles.bgCircle}>
-              <div className={styles.glassyDiv}>
-                <div className={styles.svgContainer}>
-                  <ExploreUs/>
-                </div>
-                <div className={styles.arrow}>
-                  <HeroSecArrow/>
-                </div>
-              </div>
-            </div>
-          </div>
+          <HeroRight/>
           )
         }
       </div>

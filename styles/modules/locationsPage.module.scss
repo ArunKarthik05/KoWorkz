@@ -1,0 +1,56 @@
+@import "../app.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main{
+    .contactUs{
+        background-color: white !important;
+        color: black !important;
+    }
+    .contactContainer{
+        position: relative;
+        .heroRight{
+            position: absolute;
+            top: 15vh;
+            right: 10%;
+            padding-right: 10vw;
+            @include respond-to(mobiles){
+                display: none;
+            }
+            .bgCircle{
+                background-color: $color-orange;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                position: relative;
+                @extend .flexCol;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    z-index: 10;
+                }
+            }
+            .glassyDiv{
+                position: absolute;
+                top: 1%;
+                left: 50%;
+                backdrop-filter: blur(30px);
+                background-color: rgba(245, 245, 245, 0.067);
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                .svgContainer{
+                    position: absolute;
+                    top:9%;
+                    left: 9%;
+                }
+                .arrow{
+                    position: absolute;
+                    top: 20%;
+                    left: 20%;
+                }
+            }
+        }
+    }
+}

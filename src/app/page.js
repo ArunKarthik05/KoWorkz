@@ -1,6 +1,7 @@
 import styles from "../../styles/modules/page.module.scss";
 import Navbar from "@/components/Navbar";
 import Slider from "@/components/Slider";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import HeroSection from "@/components/sections/Hero";
@@ -14,30 +15,37 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Navbar navItems={navItems}/>
-      <section className={styles.hero}>
-        <HeroSection/>
-      </section>
-      <Slider/>
+      <main>
+        <section className={styles.hero}>
+          <HeroSection/>
+        </section>
+        <Slider/>
 
-      <section>
-        <Services/>
-      </section>
+        <section>
+          <Services/>
+        </section>
 
-      <section>
-        <Locations/>
-      </section>
+        <section>
+          <Locations/>
+        </section>
 
-      <section>
-        <Solutions/>
-      </section>
+        <section>
+          <Solutions/>
+        </section>
 
-      <section>
-        <Contact/>
-      </section>
-      <Slider/>
-      <section>
+        <section>
+          <Contact/>
+        </section>
+        
+        <section>
+          <Testimonials/>
+        </section>
+        <Slider/>
+      </main>
+
+      <footer>
         <Footer navItems={navItems}/>
-      </section>
+      </footer>
 
     </main>
   );

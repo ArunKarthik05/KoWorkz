@@ -25,6 +25,11 @@
         color: black;
         padding: 5vh 0 2vh 0;
     }
+    .subHeading{
+        color: black;
+        text-align: left;
+        padding: 5vh 0 2vh 0;
+    }
     .featuresContainer{
         @extend .flexRow !optional;
         justify-content: space-between;

@@ -9,6 +9,9 @@
   background: $color-orange-gradient;
   padding: 1rem;
   @include respond-to(mobiles){
+    width: 95%;
+  }
+  @include respond-to(xs){
     width: 90%;
   }
 
