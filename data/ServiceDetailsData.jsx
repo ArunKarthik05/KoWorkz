@@ -31,6 +31,22 @@ export const ServiceDetailsData = {
       "The coworkspace is designed perfectly for growing teams. The office suites allow us to work in a collaborative yet private setting."
     ]
   },
+  "assorted-cabins": {
+    "images": [],
+    "heading": "Assorted Cabins",
+    "about": "Our assorted cabins provide a versatile and adaptable workspace solution for businesses seeking a unique and dynamic environment. Each cabin is designed to offer both privacy and functionality, catering to a variety of needs from individual workstations to small team collaborations. With a range of sizes and configurations, our assorted cabins ensure that you find the perfect fit for your team’s requirements. Enjoy a personalized workspace with all the essential amenities to support productivity and innovation.",
+    "features": [
+      "Variety of sizes and configurations to suit different needs",
+      "Equipped with essential office amenities and high-speed internet",
+      "Flexible rental options for short-term or long-term use",
+      "Innovative design for a comfortable and inspiring work environment"
+    ],
+    "feedback": [
+      "The assorted cabins have given us the flexibility we needed. We found the perfect setup for our team, and the space is both functional and stylish.",
+      "These cabins are ideal for our diverse team. We appreciate the range of sizes and the professional amenities that come with each unit.",
+      "The versatility of the assorted cabins has been fantastic for our dynamic projects. It’s easy to scale up or down based on our needs."
+    ]
+    },  
   "conference-rooms": {
     "images": [],
     "heading": "Conference Rooms",

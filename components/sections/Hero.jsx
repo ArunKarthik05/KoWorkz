@@ -52,7 +52,7 @@ export default function HeroSection() {
 
       <div className={styles.heroImage}>
         <div className={styles.imageContainer}>
-          <Image src="/hero-section.webp" alt="koworkz-home" height="336" width="970"/>
+          <Image src="/hero-section.webp" alt="koworkz-home" fill/>
         </div>
         <div className={styles.stats}></div>
       </div>

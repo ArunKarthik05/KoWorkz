@@ -8,8 +8,9 @@
         align-items: center;
         justify-content: center;
         h1{
-            font-size: $font-size-header;
+            font-size: $font-size-header-mobile;
         }
+        padding: 2vh 0;
     }
     section{
         min-height: 90vh;

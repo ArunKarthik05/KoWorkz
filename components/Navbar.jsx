@@ -4,16 +4,19 @@ import styles from '../styles/modules/navbar.module.scss';
 import Image from 'next/image';
 import useIsMobile from '@/CustomHooks/IsMobile';
 import Link from 'next/link';
+import {useRouter} from 'next/navigation';
 
 export default function Navbar({navItems}) {
   const isMobile = useIsMobile();
   const [isOpen,setIsOpen] = useState(false);
+  const router = useRouter();
 
   const handleClick = ()=>{
     setIsOpen((cur)=>!cur);
   }
   const handleNav = ()=>{
-    
+    if( router.pathname == "/") return;
+    router.push("/");
   }
 
   return (
@@ -24,6 +27,8 @@ export default function Navbar({navItems}) {
         height={80}
         width={150}
         className={styles.logo}
+        onClick={handleNav}
+        style={{cursor:"pointer"}}
       />
       {isMobile ? (
         <>
