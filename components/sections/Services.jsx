@@ -57,7 +57,7 @@ export default function Services() {
           <div className={styles.line}></div>
           <p className={styles.lineTag}>Our Services</p>
         </div>
-        <h1 className={styles.header}>Explore our <br /> CoWorking Services</h1>
+        <h1 className={styles.header}>Explore our <br /> <span className={styles.textOrange}>CoWorking</span> Services</h1>
 
         {Services.map((service, i) => (
           <div className={styles.mainDiv} key={i} onMouseEnter={()=>handleToggle(i)} onMouseLeave={()=>handleToggle(i)}>

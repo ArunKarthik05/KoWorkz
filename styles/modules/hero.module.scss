@@ -195,6 +195,17 @@
             width: 30%;
             background: $color-orange-gradient;
             border-radius: 1rem;
+            @extend .flexCol !optional;
+            justify-content: space-evenly;
+            align-items: center;
+            h2{
+                text-align: left;
+                border:1px solid red;
+                @include respond-to(mobiles){
+                    font-size: $font-size-medium;
+                    gap: 1rem;
+                }
+            }
             @include respond-to(mobiles){
                 height: 60%;
                 width: 90%;

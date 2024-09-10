@@ -84,7 +84,7 @@ export default function Solutions() {
             <div className={styles.line}></div>
             <p className={styles.lineTag}>Why Choose Us</p>
             </div>
-            <h1 className={styles.header}>Discover our <br /> CoWorking Solutions</h1>
+            <h1 className={styles.header}>Discover our <br /> <span className={styles.textOrange}>CoWorking</span> Solutions</h1>
 
             <div className={styles.gridContainer}>
                 {Solutions.map((solution,i)=>{
@@ -92,7 +92,7 @@ export default function Solutions() {
                         <div key={i} className={styles.itemContainer}>
                             <div className={styles.svgContainer}>
                              {solution.image}
-                            <div className={styles.star}><Image src="/Assets/star.png" alt='star' height="30" width="30"/></div>
+                            <div className={styles.star}><Image src="/star.png" alt='star' height="30" width="30"/></div>
                             </div>
                             <h2>{solution.heading}</h2>
                             <p>{solution.about}</p>
