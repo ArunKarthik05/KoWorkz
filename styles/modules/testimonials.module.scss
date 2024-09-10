@@ -57,7 +57,7 @@
             @extend .flexRow !optional;
             align-items: center;
             gap: 5vw;
-            @include respond-to(mobiles){
+            @include respond-to(medium){
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -66,19 +66,32 @@
                 font-size: $font-size-xs;
                 padding: 5vh 0;
             }
-            .imgContainer{
-                margin-left: 10vw;
-                height: 30vh;
-                width: 15vw;
-                background-color: white;
-                border-radius: 50%;
+            .quoteContainer{
                 position: relative;
-                z-index: 9;
-                overflow: visible;
-                @include respond-to(mobiles){
-                    width: 200px;
-                    height: 200px;
-                    margin-left: 0;
+                .imgContainer{
+                    margin-left: 10vw;
+                    height: 30vh;
+                    width: 15vw;
+                    background-color: white;
+                    border-radius: 50%;
+                    position: relative;
+                    z-index: 9;
+                    overflow: hidden;
+                    @extend .imgContainer !optional;
+                    img{
+                        object-fit: contain;
+                    }
+                
+                    @include respond-to(medium){
+                        width: 250px;
+                        height: 250px;
+                        margin-left: 0;
+                    }
+                    @include respond-to(mobiles){
+                        width: 200px;
+                        height: 200px;
+                        margin-left: 0;
+                    }
                 }
                 .quoteOpening{
                     position: absolute;
@@ -114,6 +127,11 @@
                     @extend .textOrange !optional;
                     padding:0 1rem;
                     font-size: 32px;
+                    svg{
+                    @include respond-to(mobiles){
+                        height: 20px;
+                        width: 20px;
+                    }}
                 }
             }
             .feedback{
@@ -121,6 +139,9 @@
             }
         }
     }
+}
+.right{
+    transform: rotate(-180deg);
 }
 .fadeOut {
     animation: fadeout .5s ease-in forwards;

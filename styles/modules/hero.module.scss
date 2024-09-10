@@ -200,7 +200,6 @@
             align-items: center;
             h2{
                 text-align: left;
-                border:1px solid red;
                 @include respond-to(mobiles){
                     font-size: $font-size-medium;
                     gap: 1rem;
