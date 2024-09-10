@@ -4,6 +4,7 @@ import styles from "@/styles/modules/testimonials.module.scss";
 import HeroSecArrow from './svg/HeroSecArrow';
 import { feedbacks } from '@/data/Feedbacks';
 import Image from 'next/image';
+import Line from "@/public/Assets/Line.svg"
 
 export default function Testimonials() {
     const data = feedbacks;
@@ -38,7 +39,9 @@ export default function Testimonials() {
                 <div className={styles.headingContent}>
                     <div>
                         <div className={styles.lineContent}>
-                            <div className={styles.line}></div>
+                            <>
+                              <Line/>
+                            </>
                             <p className={styles.lineTag}>Client Testimonials</p>
                         </div>
                         <h1 className={styles.header}>Testimonials That <br /> Speak Our Results</h1>

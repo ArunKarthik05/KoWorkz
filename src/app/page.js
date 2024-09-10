@@ -1,3 +1,4 @@
+'use client'
 import styles from "../../styles/modules/page.module.scss";
 import Navbar from "@/components/Navbar";
 import Slider from "@/components/Slider";
@@ -9,44 +10,55 @@ import Locations from "@/components/sections/Locations";
 import Services from "@/components/sections/Services";
 import Solutions from "@/components/sections/Solutions";
 import { navItems } from "@/data/navItems";
+import { useRef } from "react";
 
 export default function Home() {
+  const servicesRef = useRef(null);
+  const locationsRef = useRef(null);
+  const testimonialsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const refs = {
+    services: servicesRef,
+    locations: locationsRef,
+    testimonials: testimonialsRef,
+    contact: contactRef,
+  };
 
   return (
     <main className={styles.main}>
-      <Navbar navItems={navItems}/>
+      <Navbar navItems={navItems} refs={refs} /> {/* Pass refs to Navbar */}
       <main>
         <section className={styles.hero}>
-          <HeroSection/>
+          <HeroSection />
         </section>
-        <Slider/>
+        <Slider />
 
-        <section>
-          <Services/>
-        </section>
-
-        <section>
-          <Locations/>
+        <section ref={servicesRef}>
+          <Services />
         </section>
 
-        <section>
-          <Solutions/>
+        <section ref={locationsRef}>
+          <Locations />
         </section>
 
         <section>
-          <Contact/>
+          <Solutions />
         </section>
-        
-        <section>
-          <Testimonials/>
+
+        <section ref={contactRef}>
+          <Contact />
         </section>
-        <Slider/>
+
+        <section ref={testimonialsRef}>
+          <Testimonials />
+        </section>
+        <Slider />
       </main>
 
       <footer>
-        <Footer navItems={navItems}/>
+        <Footer navItems={navItems} />
       </footer>
-
     </main>
   );
 }

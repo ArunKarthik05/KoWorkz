@@ -2,13 +2,16 @@ import React from 'react'
 import styles from "../../styles/modules/contact.module.scss";
 import OrangeButton from '../OrangeButton';
 import SocialMedia from '../SocialMedia';
+import Line from "@/public/Assets/Line.svg"
 
 export default function Contact() {
   return (
     <div className={styles.main}>
         <div className={styles.content}>
             <div className={styles.lineContent}>
-            <div className={styles.line}></div>
+            <>
+                <Line/>
+            </>
             <p className={styles.lineTag}>Contact Us</p>
             </div>
             <h1 className={styles.header}>Join Us in Our <span>Creative</span><br/>CoWorking Space</h1>

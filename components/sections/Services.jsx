@@ -2,14 +2,10 @@
 import React, { useState } from 'react';
 import styles from "../../styles/modules/services.module.scss";
 import OrangeButton from '../OrangeButton';
+import Line from "@/public/Assets/Line.svg"
 
 export default function Services() {
   const [isOpen, setIsOpen] = useState(0); 
-
-  const handleLearnMore = (serviceName) => {
-    const routeName = serviceName.toLowerCase().replace(/\s+/g, '-'); 
-    router.push(`/services/${routeName}`);
-  };
 
   const Services = [
     {
@@ -54,7 +50,9 @@ export default function Services() {
     <div className={styles.main}>
       <div className={styles.content}>
         <div className={styles.lineContent}>
-          <div className={styles.line}></div>
+          <>
+            <Line/>
+          </>
           <p className={styles.lineTag}>Our Services</p>
         </div>
         <h1 className={styles.header}>Explore our <br /> <span className={styles.textOrange}>CoWorking</span> Services</h1>

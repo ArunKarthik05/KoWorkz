@@ -4,6 +4,8 @@ import styles from "../../styles/modules/locations.module.scss";
 import OrangeButton from '../OrangeButton';
 import Arrow from "../../public/Assets/Locations-arrow.svg";
 import Image from 'next/image';
+import Line from "@/public/Assets/Line.svg"
+
 
 export default function Locations() {
   const locations = [
@@ -39,7 +41,9 @@ export default function Locations() {
           <div className={styles.headingContainer}>
               <div>
                 <div className={styles.lineContent}>
-                  <div className={styles.line}></div>
+                 <>
+                  <Line/> 
+                  </>
                   <p className={styles.lineTag}>Our Services</p>
                 </div>
                   <h1 className={styles.header}>Visit Our <br /><span className={styles.textOrange}>CoWorking Space</span> Location</h1>

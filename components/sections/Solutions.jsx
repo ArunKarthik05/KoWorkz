@@ -13,6 +13,8 @@ import Printer from "../../public/Assets/Solutions/Printer.svg";
 import Networks from "../../public/Assets/Solutions/Networks.svg";
 import Cafeteria from "../../public/Assets/Solutions/Cafeteria.svg";
 import Location from "../../public/Assets/Solutions/Location.svg";
+import Line from "@/public/Assets/Line.svg"
+
 
 export default function Solutions() {
     const Solutions = [
@@ -81,7 +83,9 @@ export default function Solutions() {
     <div className={styles.main}>
         <div className={styles.content}>
             <div className={styles.lineContent}>
-            <div className={styles.line}></div>
+            <>
+                <Line/>
+            </>
             <p className={styles.lineTag}>Why Choose Us</p>
             </div>
             <h1 className={styles.header}>Discover our <br /> <span className={styles.textOrange}>CoWorking</span> Solutions</h1>
