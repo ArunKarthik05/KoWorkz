@@ -30,7 +30,7 @@ export default function Home() {
       <Navbar navItems={navItems} refs={refs} /> {/* Pass refs to Navbar */}
       <main>
         <section className={styles.hero}>
-          <HeroSection />
+          <HeroSection ref={refs}/>
         </section>
         <Slider />
 

@@ -5,7 +5,7 @@ import useIsMobile from '@/CustomHooks/IsMobile';
 import Image from 'next/image';
 import HeroRight from '../HeroRight';
 
-export default function HeroSection() {
+export default function HeroSection({ref}) {
   const isMobile = useIsMobile();
 
   const Services = ["Private Offices","Office Suites","Assorted Cabins","Conference Rooms","Day Pass","Dedicated Seats"];4
@@ -44,7 +44,7 @@ export default function HeroSection() {
         </div>
 
         {!isMobile &&(
-          <HeroRight/>
+          <HeroRight ref={ref}/>
           )
         }
       </div>

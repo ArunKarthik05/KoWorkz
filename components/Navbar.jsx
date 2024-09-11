@@ -4,7 +4,6 @@ import styles from '../styles/modules/navbar.module.scss';
 import Image from 'next/image';
 import useIsMobile from '@/CustomHooks/IsMobile';
 import { useRouter } from 'next/navigation';
-import OrangeButton from './OrangeButton';
 
 export default function Navbar({ navItems,refs }) {
   const isMobile = useIsMobile();
