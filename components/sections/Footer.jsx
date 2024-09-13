@@ -1,9 +1,26 @@
+'use client'
 import React from 'react'
 import styles from "../../styles/modules/Footer.module.scss";
 import OrangeButton from '../OrangeButton';
 import Arrow from "../../public/Assets/footerarrow.svg";
+import { useRouter,usePathname } from 'next/navigation';
 
-export default function Footer({navItems}) {
+export default function Footer({navItems,refs}) {
+  const router = useRouter();
+  const currentPath = usePathname()
+
+  const handleScroll = (ref,index) => {
+    if(index!==0 && index!==4){
+      if(currentPath === "/contact-us"){  router.push("/")  }
+      const currentRef = refs[ref].current;
+      console.log(refs[ref])
+      if (currentRef) {
+        currentRef.scrollIntoView({ behavior: 'smooth' });
+      }
+    }else{
+      router.push(ref);
+    }
+  };
   return (
     <div className={styles.main}>
       <div className={styles.content}>
@@ -30,7 +47,7 @@ export default function Footer({navItems}) {
                 <h3 className={`${styles.nav} ${styles.textOrange}`}>Navigation</h3>
                 {navItems.map((item,i)=>{
                   return(
-                    <p key={i} className={styles.item}>{item.name}</p>
+                    <p onClick={()=>handleScroll(item.link,i)} key={i} className={styles.item}>{item.name}</p>
                   )
                 })}
               </div>

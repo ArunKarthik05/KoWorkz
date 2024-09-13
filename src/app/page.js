@@ -57,7 +57,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <Footer navItems={navItems} />
+        <Footer navItems={navItems} refs={refs}/>
       </footer>
     </main>
   );

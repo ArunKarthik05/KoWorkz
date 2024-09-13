@@ -3,17 +3,18 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/modules/navbar.module.scss';
 import Image from 'next/image';
 import useIsMobile from '@/CustomHooks/IsMobile';
-import { useRouter } from 'next/navigation';
+import { useRouter,usePathname } from 'next/navigation';
 
 export default function Navbar({ navItems,refs }) {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const currentPath = usePathname();
 
   const handleScroll = (ref,index) => {
     if(index!==0 && index!==4){
-      console.log("in");
+      if(currentPath === "/contact-us"){  router.push("/")  }
       const currentRef = refs[ref].current;
       if (currentRef) {
         currentRef.scrollIntoView({ behavior: 'smooth' });
@@ -22,6 +23,7 @@ export default function Navbar({ navItems,refs }) {
       router.push(ref);
     }
   };
+  
   const handleClick = () => {
     setIsOpen((cur) => !cur);
   };
