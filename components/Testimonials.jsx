@@ -6,7 +6,7 @@ import { feedbacks } from '@/data/Feedbacks';
 import Image from 'next/image';
 import Line from "@/public/Assets/Line.svg"
 
-export default function Testimonials() {
+export default function Testimonials({padding}) {
     const data = feedbacks;
     const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
     const [animation, setAnimation] = useState(''); // To track animation classes
@@ -35,7 +35,7 @@ export default function Testimonials() {
 
     return (
         <div className={styles.main}>
-            <div className={styles.content}>
+            <div className={padding === false ? styles.content2 : styles.content}>
                 <div className={styles.headingContent}>
                     <div>
                         <div className={styles.lineContent}>

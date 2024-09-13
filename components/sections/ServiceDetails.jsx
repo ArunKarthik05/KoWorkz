@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from "../../styles/modules/serviceDetails.module.scss";
 import {ServiceDetailsData} from '@/data/ServiceDetailsData';
+import Testimonials from '../Testimonials';
 
 export default function ServiceDetails({serviceName}) {
   const data = ServiceDetailsData[serviceName];
@@ -50,16 +51,9 @@ export default function ServiceDetails({serviceName}) {
           </div>
         </div>
         
-      <div className={styles.contentContainer}>
-        <h2 className={styles.subHeading}>Hear it from our Clients</h2>
-        <div className={styles.feedBackContainer}>
-          <div
-            className={`${styles.feedback} ${isFading ? styles.fadeOut : styles.fadeIn}`}
-          >
-            <p><span className={styles.quote}>“</span>{data.feedback[currentFeedbackIndex]}</p>
-          </div>
+        <div className={styles.TestimonialsContainer}>
+            <Testimonials padding={false}/>
         </div>
-      </div>
     
     </div>
   )

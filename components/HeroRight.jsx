@@ -3,13 +3,10 @@ import styles from "@/styles/modules/hero.module.scss";
 import ExploreUs from './svg/ExploreUs';
 import HeroSecArrow from './svg/HeroSecArrow';
 
-export default function HeroRight({ref}) {
+export default function HeroRight({refs}) {
   const handleClick = ()=>{
-    ref.contact.current.scrollIntoView({behavior:"smooth"})
-    if (ref.current) {
-      console.log("in")
-      ref.contact.current.scrollIntoView({behavior:"smooth"})
-    }
+    if( refs.contact.current)
+      refs.services.current.scrollIntoView({behavior:"smooth"})
   }
   return (
     <div className={styles.heroRight}>

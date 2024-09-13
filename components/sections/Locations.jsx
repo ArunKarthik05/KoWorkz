@@ -44,7 +44,7 @@ export default function Locations() {
                  <>
                   <Line/> 
                   </>
-                  <p className={styles.lineTag}>Our Services</p>
+                  <p className={styles.lineTag}>Our Locations</p>
                 </div>
                   <h1 className={styles.header}>Visit Our <br /><span className={styles.textOrange}>CoWorking Space</span> Location</h1>
               </div>
