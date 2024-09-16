@@ -135,11 +135,17 @@ export default function Navbar({ navItems,refs }) {
       ) : (
         <div className={`${styles.itemsWrapper} ${isScrolled && styles.glassEffect}`}>
           <div className={styles.items}>
-            {navItems.map((item, i) => (
-              <p onClick={()=>handleScroll(item.link,i)} key={i} className={styles.link}>
-                {item.name}
-              </p>
-            ))}
+            { currentPath === "/contact-us" ? (
+             <>
+              <p onClick={()=>{router.push("/")}}>Home</p>
+             </>
+            ) : (
+              navItems.map((item, i) => (
+                <p onClick={()=>handleScroll(item.link,i)} key={i} className={styles.link}>
+                  {item.name}
+                </p>
+              ))
+            )}
           </div>
         </div>
       )}

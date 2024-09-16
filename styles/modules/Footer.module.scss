@@ -88,11 +88,27 @@
     .copyRight{
         font-family: "Semi-Bold";
         @extend .flexRow !optional;
-        gap:20%;
+        justify-content: space-between;
         padding: 2rem 0;
         color:gray;
         @include respond-to(medium){
             font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .flowED{
+            @extend .flexRow !optional;
+            gap: 1rem;
+            align-items: center;
+            @include respond-to(mobiles){
+                svg{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
         }
     }
 }

@@ -48,9 +48,6 @@ export default function Locations() {
                 </div>
                   <h1 className={styles.header}>Visit Our <br /><span className={styles.textOrange}>CoWorking Space</span> Location</h1>
               </div>
-              <div className={styles.btnContainer}>
-                <OrangeButton text="Visit All Locations"/>
-              </div>
           </div>
 
           <div className={styles.itemContainer}>
