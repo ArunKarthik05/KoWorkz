@@ -58,7 +58,7 @@ export default function Footer({navItems,refs}) {
                 <p>+91 9894172765</p>
                 <p>www.koworkz.com</p>
                 <p>koworkz@gmail.com</p>
-                <p>City Square Complex<br/>Bharathiyar Rd, <br/>Coimbatore</p>
+                <p className={styles.addressLine}>Elysium Towers,<br/>Park Gate Rd,<br/>ATT Colony,<br/>Gopalapuram,<br/>Coimbatore,<br/>Tamil Nadu 641018</p>
               </div>
 
               <div>

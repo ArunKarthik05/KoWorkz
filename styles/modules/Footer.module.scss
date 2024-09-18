@@ -48,6 +48,9 @@
             p{
                 padding: 1rem 0;
             }
+            .addressLine{
+                line-height: 1.5em;
+            }
         }
         .inputContainer{
             @extend .flexRow !optional;

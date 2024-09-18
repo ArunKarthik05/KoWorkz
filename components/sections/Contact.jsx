@@ -51,12 +51,12 @@ export default function Contact() {
                 <div className={styles.flexRight}>
                     <div>
                         <h2>Address</h2>
-                        <p>4517 Washington Ave. Manchester,Kentucky 39495</p>
+                        <p>Elysium Towers, Park Gate Rd, ATT Colony, Gopalapuram, Coimbatore, Tamil Nadu 641018</p>
                     </div>
                     <div>
                         <h2>Contact</h2>
-                        <p>Phone : +919999999999</p>
-                        <p>Email : example@gmail.com </p>
+                        <p>Phone : +91 9894172765</p>
+                        <p>Email : koworkz@gmail.com </p>
                     </div>
                     <div>
                         <h2>Stay Connected</h2> 
