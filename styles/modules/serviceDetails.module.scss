@@ -14,11 +14,15 @@
     .slider{
         .imgContainer{
             height: 50vh;
-            width: 90vw;
+            width: 60vw;
+            margin: auto;
             background-color: $color-gray;
             border-radius: 1rem;
             @extend .imgContainer !optional;
             background-color: gray;
+            img{
+                object-fit: cover;
+            }
         }
     }
     .heading{

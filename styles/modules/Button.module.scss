@@ -8,6 +8,7 @@
     height: fit-content;
     @extend .flexRow !optional;
     justify-content: center;
+    cursor: pointer;
 
     button {
        @extend .OrangeBtn !optional;
