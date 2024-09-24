@@ -21,8 +21,8 @@ export default function OrangeButton({text,redirectLink}) {
   };
   return (
     <div className={styles.btnMain} onMouseEnter={handleHover} onMouseLeave={handleHover}>
-        <button>{text}</button>
-        <div  className={`${styles.arrowContainer} ${isHovered ? styles.add : styles.remove}`}
+        <button className={`${styles.button} ${isHovered ? styles.add : styles.remove}`}>{text}</button>
+        <div  className={styles.arrowContainer}
         onClick={handleClick}
         >
         <svg width="34px" height="34px" viewBox="0 0 41 40" fill="none">
