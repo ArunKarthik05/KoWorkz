@@ -12,17 +12,25 @@
     }
 
     .slider{
+        @extend .flexRow !optional;
+        gap:30vw;
+        overflow-x: hidden;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        margin-left: 10vw;
         .imgContainer{
+            scroll-snap-align: start;
             height: 50vh;
-            width: 60vw;
-            margin: auto;
+            min-width: 70vw;
             background-color: $color-gray;
             border-radius: 1rem;
             @extend .imgContainer !optional;
-            background-color: gray;
             img{
                 object-fit: cover;
             }
+        }
+        .imgContainer:nth-child(3){
+            margin-right: 10vw;
         }
     }
     .heading{

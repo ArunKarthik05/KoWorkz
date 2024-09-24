@@ -1,5 +1,6 @@
 @import "../app.scss";
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .main{
     background-color: white;
@@ -66,7 +67,11 @@
                 border-top-right-radius: 1rem;
                 height: 150px;
                 width: 80%;
-                margin: auto;                
+                margin: auto;       
+                @include respond-to(mobiles){
+                    width: 100%;
+                    margin: 0;
+                }         
 
                 img{
                     object-fit: cover;
@@ -82,7 +87,6 @@
                 position: relative;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
             }
         }
     }

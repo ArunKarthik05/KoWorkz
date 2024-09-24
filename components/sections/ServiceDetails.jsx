@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from "../../styles/modules/serviceDetails.module.scss";
 import {ServiceDetailsData} from '@/data/ServiceDetailsData';
 import Testimonials from '../Testimonials';
@@ -10,6 +10,28 @@ export default function ServiceDetails({serviceName}) {
   const data = ServiceDetailsData[serviceName];
   const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [activeContainer, setActiveContainer] = useState(0); 
+  const scrollContainer = useRef(null);
+
+  const handleNext = () => {
+    if (activeContainer < 2 ) {
+        scrollContainer.current.scrollBy({ left: 1000, behavior: 'smooth' });
+        setActiveContainer(activeContainer + 1);
+    }else{
+        setTimeout(() => {
+            scrollContainer.current.scrollTo({ left: 0, behavior: 'auto' }); 
+            setActiveContainer(0);
+        }, 500);
+    }
+};
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        handleNext();
+    }, 3000); 
+
+    return () => clearInterval(intervalId);
+  }, [activeContainer]); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,10 +49,13 @@ export default function ServiceDetails({serviceName}) {
 
   return (
     <div className={styles.main}>
-        <div className={styles.slider}>
-            <div className={styles.imgContainer}>
-                <Image src={data.image} alt={data.heading} height={300} width={800}/>
-            </div>
+        <div className={styles.slider} ref={scrollContainer}>
+            {data.images.map((image,i)=>(
+              <div className={styles.imgContainer} key={i}>
+                <Image src={`/services/${image}`} alt={image} height={300} width={800}/>
+              </div>
+            ))
+            }
         </div>
 
         {/* content */}
