@@ -5,7 +5,7 @@
 .slider {
   overflow: hidden;
   position: relative;
-  width: 98%;
+  width: 100%;
   background: $color-orange-gradient;
   padding: 1rem;
   @include respond-to(mobiles){

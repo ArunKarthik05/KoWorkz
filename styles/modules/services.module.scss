@@ -65,8 +65,13 @@
                 border-top-left-radius: 1rem;
                 border-top-right-radius: 1rem;
                 height: 150px;
-                width: 100%;
-                background-color: gray;
+                width: 80%;
+                margin: auto;                
+
+                img{
+                    object-fit: cover;
+                    object-position: center 45%;
+                }
             }
         }
         .btnContainer{

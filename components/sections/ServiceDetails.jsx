@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react';
 import styles from "../../styles/modules/serviceDetails.module.scss";
 import {ServiceDetailsData} from '@/data/ServiceDetailsData';
 import Testimonials from '../Testimonials';
+import Image from 'next/image';
 
 export default function ServiceDetails({serviceName}) {
+  console.log(serviceName)
   const data = ServiceDetailsData[serviceName];
   const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -27,7 +29,7 @@ export default function ServiceDetails({serviceName}) {
     <div className={styles.main}>
         <div className={styles.slider}>
             <div className={styles.imgContainer}>
-                {/* <Image/> */}
+                <Image src={data.image} alt={data.heading} height={300} width={800}/>
             </div>
         </div>
 

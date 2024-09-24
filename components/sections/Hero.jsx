@@ -87,7 +87,7 @@ export default function HeroSection({ refs }) {
 
       <div className={styles.heroImage}>
         <div className={styles.imageContainer}>
-          <Image src="/hero-section.webp" alt="koworkz-home" fill />
+          <Image src="/hero.jpeg" alt="koworkz-home" fill />
         </div>
         <div className={styles.stats} ref={statsRef}>
           <h2>{centres}+ Centres</h2>

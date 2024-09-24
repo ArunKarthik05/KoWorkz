@@ -184,6 +184,7 @@
             background-color: gray;
             border-radius: 1rem;
             img{
+                object-position:center 10% ;
                 object-fit: cover;                
             }
             @include respond-to(mobiles){
