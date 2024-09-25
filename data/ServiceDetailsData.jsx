@@ -51,7 +51,7 @@ export const ServiceDetailsData = {
     ]
     },  
   "conference-rooms": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["conf-rooms.jpeg",'conf-2.jpeg','conf-3.jpeg'],
     "image": "/services/conf-rooms.jpeg",
     "heading": "Conference Rooms",
     "about": "Our conference rooms offer a professional setting for your meetings, presentations, and collaborative sessions. Designed with advanced technology and modern furnishings, these rooms provide an optimal environment for productive discussions and strategic planning. Equipped with state-of-the-art audiovisual equipment and high-speed internet, our conference rooms ensure smooth and efficient meetings. Whether you’re hosting a small team or a large client presentation, our spaces are designed to meet your needs with style and functionality.",
