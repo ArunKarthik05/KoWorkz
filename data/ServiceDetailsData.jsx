@@ -1,6 +1,6 @@
 export const ServiceDetailsData = {
   "private-offices": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["private-offices.jpeg",'private-offices2.jpeg','private-offices3.jpeg'],
     "image" : "/services/private-offices.jpeg",
     "heading" : "Private-Offices",
     "about": "Our private offices offer a dedicated and professional space designed to cater to the unique needs of individuals and small teams. These offices provide a quiet and secure environment where you can focus on your work without distractions. Each private office is fully furnished with modern amenities to ensure maximum comfort and productivity. Whether you need a space for client meetings or a quiet room to concentrate, our private offices offer the flexibility and privacy you need.",
@@ -17,7 +17,7 @@ export const ServiceDetailsData = {
     ]
   },
   "office-suites": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["private-offices.jpeg",'cabins2.jpeg','seats.jpeg'],
     "image" : "/services/office-suites.jpeg",
     "heading" : 'Office Suites',
     "about": "Our office suites provide a comprehensive solution for growing businesses looking for more than just a workspace. Each suite is designed to offer a combination of private offices and open areas, allowing for a flexible and efficient work environment. Perfect for teams that need both collaboration and concentration spaces, our office suites come with top-notch amenities and customizable options to match your business requirements. Enjoy the benefits of a professional environment with the added advantage of scalability as your team expands.",
@@ -34,7 +34,7 @@ export const ServiceDetailsData = {
     ]
   },
   "assorted-cabins": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["cabins.jpeg",'cabins2.jpeg','cabins3.jpeg'],
     "image": "/services/cabins.jpeg",
     "heading": "Assorted Cabins",
     "about": "Our assorted cabins provide a versatile and adaptable workspace solution for businesses seeking a unique and dynamic environment. Each cabin is designed to offer both privacy and functionality, catering to a variety of needs from individual workstations to small team collaborations. With a range of sizes and configurations, our assorted cabins ensure that you find the perfect fit for your team’s requirements. Enjoy a personalized workspace with all the essential amenities to support productivity and innovation.",
@@ -68,7 +68,7 @@ export const ServiceDetailsData = {
     ]
   },
   "dedicated-seats": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["day-pass.jpeg",'seats2.jpeg','seats.jpeg'],
     "image": "/services/seats.jpeg",
     "heading": "Dedicated Seats",
     "about": "Our dedicated seats offer a fixed workspace within a vibrant coworking environment, providing the perfect balance between personal space and community interaction. Each dedicated seat is assigned to an individual, ensuring you have a consistent and personalized workspace. With access to all the essential amenities and the option to customize your area, our dedicated seats provide a reliable and productive setting for your daily work. Enjoy the benefits of a dedicated workspace with the added flexibility of a dynamic coworking community.",
@@ -85,7 +85,7 @@ export const ServiceDetailsData = {
     ]
   },
   "day-pass": {
-    "images" : ["private-offices.jpeg",'conf-2.jpeg','conf-3.jpeg'],
+    "images" : ["day-pass.jpeg",'daypass-2.jpeg','daypass-3.jpeg'],
     "image": "/services/day-pass.jpeg",
     "heading": "Day Pass",
     "about": "Our day pass provides flexible access to our coworking spaces for those who need a workspace on a short-term basis. Perfect for freelancers, remote workers, or visiting professionals, the day pass grants you full use of our facilities and amenities for a single day. Enjoy a productive work environment with access to high-speed internet, comfortable workstations, and common areas. The day pass offers a convenient and cost-effective solution for those who need a professional workspace without a long-term commitment.",
