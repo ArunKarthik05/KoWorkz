@@ -1,6 +1,6 @@
 export const ServiceDetailsData = {
   "private-offices": {
-    "images" : ["private-offices.jpeg",'private-offices2.jpeg','private-offices3.jpeg'],
+    "images" : ["private-offices.jpeg",'private-offices3.jpeg','private-offices2.jpeg'],
     "image" : "/services/private-offices.jpeg",
     "heading" : "Private-Offices",
     "about": "Our private offices offer a dedicated and professional space designed to cater to the unique needs of individuals and small teams. These offices provide a quiet and secure environment where you can focus on your work without distractions. Each private office is fully furnished with modern amenities to ensure maximum comfort and productivity. Whether you need a space for client meetings or a quiet room to concentrate, our private offices offer the flexibility and privacy you need.",

@@ -43,6 +43,10 @@
             @extend .flexCol !optional;
             justify-content: center;
             gap: 1rem;
+            @include respond-to(mobiles){
+                width: 80%;
+                margin-left: 15%;
+            }
 
             .tagContainer{
                 @extend .flexRow !optional;
@@ -87,6 +91,7 @@
                 position: relative;
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
             }
         }
     }

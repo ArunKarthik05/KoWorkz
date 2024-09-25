@@ -39,8 +39,11 @@
         transition: none;
         // visibility: hidden;
         // z-index: -1;
-        transform: translateX(-80px);
+        // transform: translateX(-80px);
         @include respond-to(mobiles){
+          position: absolute;
+          right: 0;
+          top: 5%;
           border-radius: 1.5rem;
           padding-left: 2.5rem;
         }

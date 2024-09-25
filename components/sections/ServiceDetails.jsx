@@ -6,16 +6,13 @@ import Testimonials from '../Testimonials';
 import Image from 'next/image';
 
 export default function ServiceDetails({serviceName}) {
-  console.log(serviceName)
   const data = ServiceDetailsData[serviceName];
-  const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
   const [activeContainer, setActiveContainer] = useState(0); 
   const scrollContainer = useRef(null);
 
   const handleNext = () => {
     if (activeContainer < 2 ) {
-        scrollContainer.current.scrollBy({ left: 1000, behavior: 'smooth' });
+        scrollContainer.current.scrollBy({ left: 500, behavior: 'smooth' });
         setActiveContainer(activeContainer + 1);
     }else{
         setTimeout(() => {
@@ -32,20 +29,6 @@ export default function ServiceDetails({serviceName}) {
 
     return () => clearInterval(intervalId);
   }, [activeContainer]); 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFading(true); 
-      setTimeout(() => {
-        setCurrentFeedbackIndex((prevIndex) =>
-          prevIndex === data.feedback.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsFading(false); 
-      }, 500); 
-    }, 5000); 
-
-    return () => clearInterval(interval);
-  }, [data.feedback.length]);
 
   return (
     <div className={styles.main}>
