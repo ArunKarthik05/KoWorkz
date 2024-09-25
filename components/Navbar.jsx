@@ -133,9 +133,9 @@ export default function Navbar({ navItems,refs }) {
           )}
         </>
       ) : (
-        <div className={`${styles.itemsWrapper} ${isScrolled && styles.glassEffect}`}>
+        <div className={`${styles.itemsWrapper} ${isScrolled ? styles.glassEffect : ''} ${currentPath != "/" ? styles.singleBtn: ""}`}>
           <div className={styles.items}>
-            { currentPath === "/contact-us" ? (
+            { currentPath != "/" ? (
              <>
               <p onClick={()=>{router.push("/")}}>Home</p>
              </>
