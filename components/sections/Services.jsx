@@ -65,7 +65,7 @@ export default function Services() {
         <h1 className={styles.header}>Explore our <br /> <span className={styles.textOrange}>CoWorking</span> Services</h1>
 
         {Services.map((service, i) => (
-          <div className={styles.mainDiv} key={i} onMouseEnter={()=>handleToggle(i)} onMouseLeave={()=>handleToggle(i)}>
+          <div className={`${styles.mainDiv} ${isOpen === i ? styles.down : ''}`} key={i} onMouseEnter={()=>handleToggle(i)} onMouseLeave={()=>handleToggle(i)}>
             <h2 className={styles.num}>0{i + 1}.</h2>
             {/* name */}
             <div className={styles.contentContainer}>
@@ -79,7 +79,7 @@ export default function Services() {
               </div>
 
               {isOpen === i && (
-                <>
+                <div className={styles.openingDiv}>
                   <p>{service.content}</p>
                   <div className={styles.btnContainer}>
                     <OrangeButton text="Learn More" redirectLink={service.name}/>
@@ -87,7 +87,7 @@ export default function Services() {
                   <div className={styles.imgContainer}>
                     <Image src={service.image} alt={service.name} height={200} width={800} id={`img-${i+1}`}/>
                   </div>
-                </>
+                </div>
               )}
             </div>
           </div>

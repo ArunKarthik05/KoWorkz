@@ -11,7 +11,7 @@ export default function Footer({navItems,refs}) {
 
   const handleScroll = (ref,index) => {
     if(index!==0 && index!==4){
-      if(currentPath === "/contact-us"){  router.push("/")  }
+      if(currentPath != "/"){ return router.push("/")  }
       
       const currentRef = refs[ref].current;
       console.log(refs[ref])

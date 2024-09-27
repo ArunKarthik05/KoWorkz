@@ -138,6 +138,7 @@ export default function Navbar({ navItems,refs }) {
             { currentPath != "/" ? (
              <>
               <p onClick={()=>{router.push("/")}}>Home</p>
+              <p onClick={()=>{router.push("/contact-us")}}>Contact Us</p>
              </>
             ) : (
               navItems.map((item, i) => (

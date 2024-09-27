@@ -3,7 +3,7 @@ import React from 'react'
 export default function ExploreUs() {
   return (
     <>
-        <svg width="100px" height="100px" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100px" height="100px" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" style={{cursor:"pointer"}}>
             <ellipse cx="5" cy="4.5" rx="5" ry="4.5" transform="matrix(1 0 0 -1 39 12)" fill="#F15B59"/>
             <ellipse cx="5" cy="4.5" rx="5" ry="4.5" transform="matrix(1 0 0 -1 100 77)" fill="#F15B59"/>
             <ellipse cx="5" cy="4.5" rx="5" ry="4.5" transform="matrix(1 0 0 -1 15 96)" fill="#F15B59"/>
