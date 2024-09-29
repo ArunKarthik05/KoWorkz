@@ -41,11 +41,11 @@ export default function HeroSection({ refs }) {
               incrementValues(targetClients, setClients, 50);
               incrementValues(targetBookings, setBookings, 30);
               setHasAnimated(true);
-              observer.disconnect(); // Stop observing after the animation starts
+              observer.disconnect(); 
             }
           });
         },
-        { threshold:1 } // Trigger when 50% of the div is visible
+        { threshold:1 } 
       );
 
       if (statsRef.current) {
@@ -68,7 +68,7 @@ export default function HeroSection({ refs }) {
     <div className={styles.heroMain}>
       <div className={styles.textMain}>
         <div className={styles.heroLeft}>
-          <h1>Ready to Move-in complete</h1>
+          <h1>Ready to Move-in Complete</h1>
           <h1 className={styles.textOrange}>WorkSpace Solutions</h1>
         </div>
 

@@ -23,7 +23,9 @@ export default function Slider() {
               <p>{slide}</p>
             </div>
             <div>
-              <Image src="/slider.png" alt="star" height="20" width="20" />
+            <svg height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+              <circle r="6" cx="6" cy="6" fill="black" />
+            </svg>
             </div>
           </>
         ))}

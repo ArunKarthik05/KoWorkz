@@ -61,10 +61,9 @@
                 padding:1rem 2rem;
                 border-top-left-radius:1rem ;
                 border-bottom-left-radius:1rem ;
-                &::placeholder{
-                    color: white;
-                    font-weight: bold;
-                }
+                @extend .textOrange !optional;
+                font-weight: bold;
+                border:1px solid rgba(219, 219, 219, 0.404);
             }
             .orangeDiv{
                 background: $color-orange-gradient;

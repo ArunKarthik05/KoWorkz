@@ -14,9 +14,11 @@ export default function ServiceDetails({serviceName}) {
 
   const handleNext = () => {
     if (activeContainer < 2 ) {
-      let scrollAmount = 1000;
+      let scrollAmount;
         if(isMobile){
           scrollAmount = 100; 
+        }else{
+          scrollAmount = 1000;
         }
         scrollContainer.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         setActiveContainer(activeContainer + 1);
