@@ -17,7 +17,7 @@ export const ServiceDetailsData = {
     ]
   },
   "office-suites": {
-    "images" : ["private-offices.jpeg",'cabins2.jpeg','seats.jpeg'],
+    "images" : ["private-offices.jpeg",'office-suites-2.jpeg','seats.jpeg'],
     "image" : "/services/office-suites.jpeg",
     "heading" : 'Office Suites',
     "about": "Our office suites provide a comprehensive solution for growing businesses looking for more than just a workspace. Each suite is designed to offer a combination of private offices and open areas, allowing for a flexible and efficient work environment. Perfect for teams that need both collaboration and concentration spaces, our office suites come with top-notch amenities and customizable options to match your business requirements. Enjoy the benefits of a professional environment with the added advantage of scalability as your team expands.",

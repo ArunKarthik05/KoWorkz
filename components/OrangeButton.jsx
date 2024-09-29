@@ -11,7 +11,6 @@ export default function OrangeButton({text,redirectLink}) {
       setIsHovered((cur)=>!cur);
     }
     const handleClick = () => {
-      console.log("in")
       if (redirectLink) {
         let link = 'services/'
         link += redirectLink.toLowerCase().replace(/\s+/g, '-'); 
