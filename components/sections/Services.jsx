@@ -80,7 +80,7 @@ export default function Services() {
 
               {isOpen === i && (
                 <div className={styles.openingDiv}>
-                  <p>{service.content}</p>
+                  <p className={styles.paracontent}>{service.content}</p>
                   <div className={styles.btnContainer}>
                     <OrangeButton text="Learn More" redirectLink={service.name}/>
                   </div>
