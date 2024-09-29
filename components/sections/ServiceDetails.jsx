@@ -12,7 +12,7 @@ export default function ServiceDetails({serviceName}) {
 
   const handleNext = () => {
     if (activeContainer < 2 ) {
-        scrollContainer.current.scrollBy({ left: 500, behavior: 'smooth' });
+        scrollContainer.current.scrollBy({ left: 1000, behavior: 'smooth' });
         setActiveContainer(activeContainer + 1);
     }else{
         setTimeout(() => {
