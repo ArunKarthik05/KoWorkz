@@ -68,8 +68,8 @@ export default function HeroSection({ refs }) {
     <div className={styles.heroMain}>
       <div className={styles.textMain}>
         <div className={styles.heroLeft}>
-          <h1>Ready to Move-in</h1>
-          <h1 className={styles.textOrange}>Coworking Spaces</h1>
+          <h1>Ready to Move-in complete</h1>
+          <h1 className={styles.textOrange}>WorkSpace Solutions</h1>
         </div>
 
         {!isMobile && <HeroRight refs={refs} />}

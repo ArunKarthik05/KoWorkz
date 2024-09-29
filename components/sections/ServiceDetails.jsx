@@ -4,15 +4,21 @@ import styles from "../../styles/modules/serviceDetails.module.scss";
 import {ServiceDetailsData} from '@/data/ServiceDetailsData';
 import Testimonials from '../Testimonials';
 import Image from 'next/image';
+import useIsMobile from '@/CustomHooks/IsMobile';
 
 export default function ServiceDetails({serviceName}) {
+  const isMobile = useIsMobile();
   const data = ServiceDetailsData[serviceName];
   const [activeContainer, setActiveContainer] = useState(0); 
   const scrollContainer = useRef(null);
 
   const handleNext = () => {
     if (activeContainer < 2 ) {
-        scrollContainer.current.scrollBy({ left: 1000, behavior: 'smooth' });
+      let scrollAmount = 1000;
+        if(isMobile){
+          scrollAmount = 100; 
+        }
+        scrollContainer.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         setActiveContainer(activeContainer + 1);
     }else{
         setTimeout(() => {
